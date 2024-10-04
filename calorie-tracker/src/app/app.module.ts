@@ -4,6 +4,8 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalorieTrackerComponent } from './calorie-tracker/calorie-tracker.component';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,11 +14,12 @@ import { CalorieTrackerComponent } from './calorie-tracker/calorie-tracker.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
     
   ],
   providers: [
-    provideClientHydration()
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

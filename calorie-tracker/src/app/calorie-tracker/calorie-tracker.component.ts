@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './calorie-tracker.component.scss'
 })
 export class CalorieTrackerComponent {
-  
 
 }
