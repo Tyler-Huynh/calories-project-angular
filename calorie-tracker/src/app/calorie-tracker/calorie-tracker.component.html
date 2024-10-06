@@ -1,1 +1,64 @@
-<p>calorie-tracker works!</p>
+<div class="window" style="width: 300px">
+    <div class="title-bar">
+      <div class="title-bar-text">Search For Food</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+        <form [formGroup] = "form" (ngSubmit) = "storeNutritionData()">
+            <div>
+                <label for = "mealType">Select the Meal You Had.</label>
+                <select>
+                    <option value = "breakfast">Breakfast</option>
+                    <option value = "lunch">Lunch</option>
+                    <option value = "dinner">Dinner</option>
+                    <option value = "snack">Snacks</option>
+                </select>
+            </div>
+            <div>
+                <label for = "foodItem">Search Food: </label>
+                <input id = "foodItem" formControlName = "foodItem" type = "text" placeholder="Enter Food Item" (input) = "searchFood()" />
+            </div>
+            <div>
+                <label for = "calories">Calories </label>
+                <input id = "calories" formControlName = "calories" type = "number" placeholder="Calories"/>
+            </div>
+            <div>
+                <label for = "proteins">Proteins </label>
+                <input id = "proteins" formControlName = "proteins" type = "number" placeholder="Proteins"/>
+            </div>
+            <div>
+                <label for = "fats">Fats </label>
+                <input id = "fats" formControlName = "fats" type = "number" placeholder="Fats"/>
+            </div>
+            <div>
+                <label for = "carbs">Carbs </label>
+                <input id = "carbs" formControlName = "carbs" type = "number" placeholder="Carbs"/>
+            </div>
+            <div>
+                <label for = "fiber">Fiber </label>
+                <input id = "fiber" formControlName = "fiber" type = "number" placeholder="Fiber"/>
+            </div>
+            <div>
+                <label for = "sugars">Sugars </label>
+                <input id = "sugars" formControlName = "sugars" type = "number" placeholder="Sugars"/>
+            </div>
+            <button type = "submit">Add Meal</button>
+        </form>
+    </div>
+  </div>
+  <div class="window" style="width: 300px">
+    <div class="title-bar">
+      <div class="title-bar-text">Your Meals!</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+    </div>
+  </div>

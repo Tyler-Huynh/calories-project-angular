@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class USDAApiService {
 
-  private baseUrl = "https://api.nal.usda.gov/fdc/v1/foods/search";
-  private apiKey = "f5TEEKlC3bvcTgjyEUJde46QgyPomfblHUrCdwyH";
+  private baseUrl = "https://api.nal.usda.gov/fdc/v1/foods/search"; //the basURL for the api itself
+  private apiKey = "f5TEEKlC3bvcTgjyEUJde46QgyPomfblHUrCdwyH"; //my api key
 
   constructor(private http: HttpClient) { }
 
   searchFood(query: string): Observable <any> {
-    return this.http.get(`${this.baseUrl}?api_key=${this.apiKey}&query=${query}`);
+    return this.http.get(`${this.baseUrl}?api_key=${this.apiKey}&query=${query}`); //procking the api for the info we want
   }
 }
