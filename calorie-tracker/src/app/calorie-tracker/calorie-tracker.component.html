@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <iframe type="audio/mp3" allow="autoplay" style="display: none"
-  src="../calorie-tracker/windows-xp-theme-song-128-ytshorts.savetube.me.mp3">
+  src="../assets/windows-xp-theme-song-128-ytshorts.savetube.me.mp3">
 </iframe>
 <body>
-    <div class="window" style="width: 300px">
+    <div #boxTopper class="window" style="width: 300px">
         <audio autoplay>
-            <source src="../calorie-tracker/windows-xp-theme-song-128-ytshorts.savetube.me.mp3" type="audio/mp3">
+            <source src="../../../public/windows-xp-theme-song-128-ytshorts.savetube.me.mp3" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
-        <div class="title-bar">
+        <div #titleBar class="title-bar" (mousedown)="startDrag($event)">
           <div class="title-bar-text">Search For Food</div>
           <div class="title-bar-controls">
             <button aria-label="Minimize"></button>
@@ -147,18 +147,18 @@
 
             <div *ngIf = "meals.breakfast.length || meals.lunch.length || meals.dinner.length || meals.snack.length">
                 <p>Total Nutrition For The Day</p>
-                <p><strong>Total Calories: </strong> {{totalCalories}} kcal</p>
-                <p><strong>Total Protein: </strong> {{totalProteins}} g</p>
-                <p><strong>Total Fats: </strong> {{totalFats}} g</p>
-                <p><strong>Total Carbohydrates: </strong> {{totalCarbs}} g</p>
-                <p><strong>Total Fiber: </strong> {{totalFiber}} g</p>
-                <p><strong>Total Sugars: </strong> {{totalSugars}} g</p>
+                <p><strong>Total Calories: </strong> {{totalCalories | number:'1.2-2'}} kcal</p>
+                <p><strong>Total Protein: </strong> {{totalProteins | number:'1.2-2'}} g</p>
+                <p><strong>Total Fats: </strong> {{totalFats | number:'1.2-2'}} g</p>
+                <p><strong>Total Carbohydrates: </strong> {{totalCarbs | number:'1.2-2'}} g</p>
+                <p><strong>Total Fiber: </strong> {{totalFiber | number:'1.2-2'}} g</p>
+                <p><strong>Total Sugars: </strong> {{totalSugars | number:'1.2-2'}} g</p>
             </div>
         </div>
     </div>
     <footer class="taskbar">
         <div class="start-button">
-            <img src="../calorie-tracker/start (1).png" alt="Start">
+            <img src="../../../public/assets/start.png" alt="Start">
         </div>
         <div class="system-time" aria-live="assertive" role="timer" aria-atomic="true">
             <span id="system-time" style="color: black; margin-right: 10px;">12:00 PM</span>
