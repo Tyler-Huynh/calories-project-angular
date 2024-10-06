@@ -36,6 +36,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
+                
+                
               }
             ],
             "styles": [

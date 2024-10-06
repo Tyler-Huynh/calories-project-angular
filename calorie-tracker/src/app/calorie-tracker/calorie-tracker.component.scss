@@ -1,0 +1,48 @@
+.taskbar {
+    background: linear-gradient(180deg, #0997ff, #0053ee 8%, #0050ee 40%, #06f 88%, #06f 93%, #005bff 95%, #003dd7 96%, #003dd7);
+    color: white;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+  
+  .start-button {
+    display: flex;
+    align-items: center;
+    background-color: #7fbf3f;
+    border: 2px solid #658c35;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+  }
+
+  .start-button img {
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  .source-button{
+    background-color: silver;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  .taskbar-items {
+    display: flex;
+  }
+  
+  .taskbar-items span {
+    margin-right: 15px;
+    cursor: pointer;
+    color: black;
+  }

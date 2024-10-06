@@ -138,4 +138,8 @@ export class CalorieTrackerComponent {
     this.calculateTotalNutrition();
     this.form.reset();
   }
+
+  switchTab(tab: MealType): void{
+    this.selectedTab = tab;
+  }
 }
